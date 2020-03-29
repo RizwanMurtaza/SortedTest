@@ -1,8 +1,10 @@
-﻿namespace SortedCheckout.Services
+﻿using SortedCheckout.Domain;
+
+namespace SortedCheckout.Services
 {
     public interface ICheckoutService
     {
-        public void ScanItem(string item);
+        public void ScanItem(CheckoutItem item);
         public double GetTotal();
     }
 }

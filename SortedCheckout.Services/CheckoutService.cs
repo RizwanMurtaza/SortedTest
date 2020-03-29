@@ -7,17 +7,35 @@ namespace SortedCheckout.Services
 {
     public class CheckoutService : ICheckoutService
     {
-        private List<string> _scanedItems = new List<string>();
+        private readonly List<string> _scannedItems = new List<string>();
         public void ScanItem(string item)
         {
-            _scanedItems.Add(item);
+            _scannedItems.Add(item);
         }
         public double GetTotal()
         {
-            if (!_scanedItems.Any())
+            if (!_scannedItems.Any())
                 return 0;
 
-            return 1;
+            var totalPrice = 0.0;
+            foreach (var item in _scannedItems)
+            {
+                switch (item)
+                {
+                    case "A99":
+                        totalPrice += 0.50;
+                        break;
+                    case "B15":
+                        totalPrice += 0.30;
+                        break;
+                    case "C40":
+                        totalPrice += 0.60;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return totalPrice;
         }
 
 

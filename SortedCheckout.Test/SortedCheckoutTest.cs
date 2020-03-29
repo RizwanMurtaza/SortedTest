@@ -33,7 +33,7 @@ namespace SortedCheckout.Test
             checkoutService.ScanItem("B15");
             checkoutService.ScanItem("C40");
             //Assert
-            Assert.AreEqual(0.50, checkoutService.GetTotal());
+            Assert.AreEqual(1.40, checkoutService.GetTotal());
 
         }
 

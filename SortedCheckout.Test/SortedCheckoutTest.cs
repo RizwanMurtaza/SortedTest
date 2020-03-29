@@ -15,10 +15,27 @@ namespace SortedCheckout.Test
         }
 
         [Test]
-        public void InitialToCheckWithNoItemScanned()
+        public void InitialToCheckWithNoItemScanned_Test()
         {
             var totalValue = _checkoutService.GetTotal();
             Assert.AreEqual(totalValue , 0);
         }
+
+
+        [Test]
+        public void ItemWithoutSpecialPrice_Test()
+        {
+            //Arrange 
+            var checkoutService = new CheckoutService();
+
+            //Act
+            checkoutService.ScanItem("A99");
+            checkoutService.ScanItem("B15");
+            checkoutService.ScanItem("C40");
+            //Assert
+            Assert.AreEqual(0.50, checkoutService.GetTotal());
+
+        }
+
     }
 }

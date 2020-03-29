@@ -43,5 +43,29 @@ namespace SortedCheckout.Test
 
         }
 
+
+        [Test]
+        public void itemWithSpecialPrice_Test()
+        {
+            //Arrange 
+            var checkoutService = new CheckoutService();
+
+            //Act
+            var A99Product = new CheckoutItem("A99", 0.50);
+            var B15Product = new CheckoutItem("B15", 0.30);
+
+            checkoutService.ScanItem(A99Product);
+            checkoutService.ScanItem(A99Product);
+            checkoutService.ScanItem(A99Product);
+
+            checkoutService.ScanItem(B15Product);
+            checkoutService.ScanItem(B15Product);
+
+
+            //Assert
+            Assert.AreEqual(1.75, checkoutService.GetTotal());
+
+        }
+
     }
 }

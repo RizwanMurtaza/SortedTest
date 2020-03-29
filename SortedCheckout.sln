@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedCheckout.Services", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedCheckout.Test", "SortedCheckout.Test\SortedCheckout.Test.csproj", "{61F275EC-B8F2-4F2D-81AA-DACD48F2A1A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedCheckout.Domain", "SortedCheckout.Domain\SortedCheckout.Domain.csproj", "{81B05508-8B38-4A33-BDCC-DF25AB31200C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{61F275EC-B8F2-4F2D-81AA-DACD48F2A1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61F275EC-B8F2-4F2D-81AA-DACD48F2A1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61F275EC-B8F2-4F2D-81AA-DACD48F2A1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B05508-8B38-4A33-BDCC-DF25AB31200C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B05508-8B38-4A33-BDCC-DF25AB31200C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B05508-8B38-4A33-BDCC-DF25AB31200C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B05508-8B38-4A33-BDCC-DF25AB31200C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

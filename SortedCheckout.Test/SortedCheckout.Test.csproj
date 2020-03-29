@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SortedCheckout.Domain\SortedCheckout.Domain.csproj" />
     <ProjectReference Include="..\SortedCheckout.Services\SortedCheckout.Services.csproj" />
   </ItemGroup>
 

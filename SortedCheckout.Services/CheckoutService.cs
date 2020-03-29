@@ -14,7 +14,10 @@ namespace SortedCheckout.Services
         }
         public double GetTotal()
         {
-            return 0;
+            if (!_scanedItems.Any())
+                return 0;
+
+            return 1;
         }
 
 

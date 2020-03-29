@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace SortedCheckout.Services
@@ -13,7 +14,7 @@ namespace SortedCheckout.Services
         }
         public double GetTotal()
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
 

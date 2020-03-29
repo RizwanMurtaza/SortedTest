@@ -27,7 +27,7 @@ namespace SortedCheckout.Test
         public void ItemWithoutSpecialPrice_Test()
         {
             //Arrange 
-            var checkoutService = new CheckoutService();
+           
 
             //Act
             var A99Product = new CheckoutItem("A99", 0.50);
@@ -35,11 +35,11 @@ namespace SortedCheckout.Test
             var C40Product = new CheckoutItem("C40", 0.60);
 
 
-            checkoutService.ScanItem(A99Product);
-            checkoutService.ScanItem(B15Product);
-            checkoutService.ScanItem(C40Product);
+            _checkoutService.ScanItem(A99Product);
+            _checkoutService.ScanItem(B15Product);
+            _checkoutService.ScanItem(C40Product);
             //Assert
-            Assert.AreEqual(1.40, checkoutService.GetTotal());
+            Assert.AreEqual(1.40, _checkoutService.GetTotal());
 
         }
 
@@ -48,22 +48,22 @@ namespace SortedCheckout.Test
         public void itemWithSpecialPrice_Test()
         {
             //Arrange 
-            var checkoutService = new CheckoutService();
+           
 
             //Act
             var A99Product = new CheckoutItem("A99", 0.50);
             var B15Product = new CheckoutItem("B15", 0.30);
 
-            checkoutService.ScanItem(A99Product);
-            checkoutService.ScanItem(A99Product);
-            checkoutService.ScanItem(A99Product);
+            _checkoutService.ScanItem(A99Product);
+            _checkoutService.ScanItem(A99Product);
+            _checkoutService.ScanItem(A99Product);
 
-            checkoutService.ScanItem(B15Product);
-            checkoutService.ScanItem(B15Product);
+            _checkoutService.ScanItem(B15Product);
+            _checkoutService.ScanItem(B15Product);
 
 
             //Assert
-            Assert.AreEqual(1.75, checkoutService.GetTotal());
+            Assert.AreEqual(1.75, _checkoutService.GetTotal());
 
         }
 
